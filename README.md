@@ -98,10 +98,15 @@ Experiment with different ANN architectures
 ### 👤 Author Details
 
 Author: Arpan Patra
+
 Degree: B.Tech in Computer Science Engineering (Artificial Intelligence & Machine Learning)
+
 Institute: Haldia Institute of Technology
+
 Location: West Bengal, India
 
 📧 Email: arpanpatra800188500@gmail.com
+
 🔗 LinkedIn: https://www.linkedin.com/in/arpan-patra-6b0a37291/
+
 🐙 GitHub: https://github.com/arpanpatra7047283086
