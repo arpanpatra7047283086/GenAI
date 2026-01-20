@@ -1,0 +1,12 @@
+streamlit
+tensorflow
+numpy 
+matplotlib
+pandas
+scikit-learn
+seaborn
+ipykernel
+streamlit
+tensorboard
+h5py==3.10.0
+protobuf==4.25.3
