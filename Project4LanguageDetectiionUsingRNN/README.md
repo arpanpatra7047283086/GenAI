@@ -60,3 +60,27 @@ An interactive web application is built using **Streamlit**, allowing users to:
 ```bash
 git clone https://github.com/your-username/Project4LanguageDetectiionUsingRNN.git
 cd Project4LanguageDetectiionUsingRNN
+```
+
+# 🚀 Future Enhancements
+
+Add model evaluation metrics in the UI
+
+Deploy the app on Streamlit Cloud
+
+Enhance feature engineering
+
+Experiment with different RNN architectures
+
+# Hosted Streamlit Website Link :
+    https://annproject7004.streamlit.app
+
+# 👤 Author Details
+
+Author: Arpan Patra
+
+Degree: B.Tech in Computer Science Engineering (Artificial Intelligence & Machine Learning)
+
+Institute: Haldia Institute of Technology
+
+Location: West Bengal, India
