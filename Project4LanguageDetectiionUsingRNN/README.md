@@ -1,112 +1,62 @@
-# 📊 Customer Churn Prediction Using Artificial Neural Network (ANN)
+# 🌍 Language Detection Using Recurrent Neural Network (RNN)
 
 ## 📌 Project Overview
 
-Customer churn is a critical problem for businesses, as retaining existing customers is often more cost-effective than acquiring new ones.  
-This project implements an **Artificial Neural Network (ANN)** model to predict whether a customer is likely to **stay with** or **leave** a company based on historical customer data.
+Language detection is an important Natural Language Processing (NLP) task that involves identifying the language of a given text.  
+This project implements a **Recurrent Neural Network (RNN)** model to automatically detect the **language of a sentence** entered by the user.
 
-The system is divided into three main components:
-
-1. **Model Building & Training**
-2. **Prediction Pipeline**
-3. **Streamlit Web Application**
+The system is built as an **end-to-end deep learning application**, including model training, preprocessing, and deployment using **Streamlit**.
 
 ---
 
 ## 🧠 1. Model Building & Training
 
 - The model is built using **TensorFlow (Keras)**.
-- A **Churn Dataset** is used, containing both numerical and categorical features.
-- Data preprocessing includes:
-  - Handling categorical variables using **ColumnTransformer**
-  - Feature scaling
-- The trained ANN model is saved in **`.h5`** format.
-- The preprocessing pipeline is serialized using **pickle** for reuse during prediction.
+- A multilingual text dataset is used for training.
+- Text preprocessing includes:
+  - Tokenization
+  - Sequence padding
+  - Label encoding of languages
+- A **Simple RNN architecture** is used for sequential text understanding.
+- The trained model is saved in **`.h5` format**.
+- The tokenizer and label encoder are saved using **pickle**.
 
 ### 📁 Relevant Files
 
-- `eda.ipynb` – Exploratory Data Analysis  
-- `pred3.ipynb` – Model training and evaluation  
-- `Saved_Model/churn_model.h5` – Trained ANN model  
-- `Saved_Model/preprocessor.pkl` – Saved preprocessing pipeline  
+- `eda.ipynb` – Data preprocessing, model training & evaluation  
+- `SavedModel/simple_rnn_model.h5` – Trained RNN model  
+- `SavedModel/tokenizer.pkl` – Tokenizer & label encoder  
 
 ---
 
-## 🔍 2. Prediction Module
+## 🔍 2. Prediction Pipeline
 
-- User input is collected in real time.
-- Input data is transformed using the **same preprocessing pipeline** used during training.
-- The ANN model outputs a **churn probability**:
-  - **> 0.5** → Customer likely to churn  
-  - **≤ 0.5** → Customer likely to stay  
-
-This ensures consistency and reliability between training and inference.
+- User input text is converted into sequences using the saved tokenizer.
+- Sequences are padded to a fixed length.
+- The trained RNN model predicts probabilities for each language.
+- The language with the **highest probability** is selected as the final prediction.
+- The model also returns a **confidence score**.
 
 ---
 
 ## 🌐 3. Streamlit Web Application
 
-An interactive web interface is developed using **Streamlit**, allowing users to:
+An interactive web application is built using **Streamlit**, allowing users to:
 
-- Enter customer details (credit score, age, geography, balance, etc.)
-- View churn probability instantly
-- Receive a clear **churn / not-churn** decision
+- Enter any sentence in any supported language
+- Detect the language instantly
+- View prediction confidence
 
-The Streamlit application:
-- Loads the trained ANN model  
-- Loads the saved preprocessing pipeline  
-- Accepts user inputs and displays results in real time  
+### ✨ Features
+- Clean and user-friendly UI
+- Fast real-time predictions
+- Cached model loading for better performance
 
-### ▶️ To Run the Application
+---
 
+## ▶️ How to Run the Application
+
+### 🔹 Step 1: Clone the Repository
 ```bash
-streamlit run app.py
-| Category             | Technologies                |
-| -------------------- | --------------------------- |
-| Programming Language | Python                      |
-| Data Analysis        | Pandas, NumPy               |
-| Visualization        | Matplotlib, Seaborn         |
-| Machine Learning     | Scikit-learn                |
-| Deep Learning        | TensorFlow (Keras)          |
-| Model Persistence    | Pickle                      |
-| Web Framework        | Streamlit                   |
-| Development Tools    | Jupyter Notebook, IPykernel |
-| Monitoring           | TensorBoard                 |
-
-├── app.py                     # Streamlit application
-├── eda.ipynb                  # Exploratory Data Analysis
-├── pred3.ipynb                # Model training & prediction
-├── requirements.txt           # Project dependencies
-├── Saved_Model/
-│   ├── churn_model.h5         # Trained ANN model
-│   └── preprocessor.pkl       # Saved preprocessing pipeline
-✅ Conclusion
-
-This project demonstrates an end-to-end machine learning system, from data analysis and ANN model training to deployment using a web interface.
-```
-
-# 🚀 Future Enhancements
-
-Add model evaluation metrics in the UI
-
-Deploy the app on Streamlit Cloud
-
-Enhance feature engineering
-
-Experiment with different ANN architectures
-
-# 👤 Author Details
-
-Author: Arpan Patra
-
-Degree: B.Tech in Computer Science Engineering (Artificial Intelligence & Machine Learning)
-
-Institute: Haldia Institute of Technology
-
-Location: West Bengal, India
-
-📧 Email: arpanpatra800188500@gmail.com
-
-🔗 LinkedIn: https://www.linkedin.com/in/arpan-patra-6b0a37291/
-
-🐙 GitHub: https://github.com/arpanpatra7047283086
+git clone https://github.com/your-username/Project4LanguageDetectiionUsingRNN.git
+cd Project4LanguageDetectiionUsingRNN
